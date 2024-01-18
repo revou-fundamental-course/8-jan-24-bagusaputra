@@ -1,5 +1,6 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
 }
 
 header {
@@ -21,14 +22,15 @@ header p {
     font-size: small;
     color: #222831;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .mainPage {
     background-color: #f0f0f0;
     width: 90%;
     max-width: 400px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 .inputSection {
@@ -36,9 +38,11 @@ header p {
     flex-direction: column;
     align-items: center;
     width: 95%;
+    padding: 10px;
+    margin-top: 20px;
 }
 
-#kolomIsian {
+#sisiPersegi {
     margin-top: 10px;
     outline: none;
     border-radius: 8px;
@@ -46,13 +50,49 @@ header p {
     padding: 10px;
 }
 
-#kolomIsian:focus {
+#sisiPersegi:focus {
+    border: solid #393E46;
+}
+
+#panjangSisi {
+    margin-top: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: solid #EEEEEE;
+    padding: 10px;
+}
+
+#panjangSisi:focus {
+    border: solid #393E46;
+}
+
+#lebarSisi {
+    margin-top: 10px;
+    outline: none;
+    border-radius: 8px;
+    border: solid #EEEEEE;
+    padding: 10px;
+}
+
+#lebarSisi:focus {
     border: solid #393E46;
 }
 
 
+.allPage {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.head {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .pilihObjek {
-    background-color: lightskyblue;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -79,6 +119,7 @@ button {
     border-radius: 8px;
     padding: 10px 20px;
     cursor: pointer;
+    background-color: lightsteelblue;
 }
 
 button:active {
@@ -96,6 +137,10 @@ button:active {
 
 .btnHitung:active {
     background-color: #222831;
+}
+
+.btnHitung:disabled {
+    background-color: lightgray;
 }
 
 .btnReset {

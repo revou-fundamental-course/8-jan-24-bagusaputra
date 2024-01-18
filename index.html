@@ -6,88 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Sample Kalkulator</title>
-    <script src="./js/index.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>
-            Kalkulator Persegi Sederhana
-        </h1>
-        <h4>
-            Selamat Datang di Kalkulator Persegi
-        </h4>
-        <p>
-            Aplikasi sederhana ini dibuat untuk melakukan perhitungan luas dan keliling persegi.
-        </p>
+    <div class="allPage">
+        <header>
+            <h1>
+                Kalkulator Persegi Sederhana
+            </h1>
 
-    </header>
+        </header>
+        <div class="mainPage">
+            <div class="head">
+                <h4>
+                    Selamat Datang di Kalkulator Persegi
+                </h4>
+                <p>
+                    Aplikasi sederhana ini dibuat untuk melakukan perhitungan luas dan keliling persegi.
+                </p>
 
-    <div class="mainPage">
-        <div class="pilihObjek">
-            <p>Pilih Objek Hitung</p>
-            <a href="#halPersegi">
-                <button class="objekHitung">Persegi</button>
-            </a>
-            <a href="#halPersPan">
-                <button class="objekHitung">Persegi Panjang</button>
-            </a>
-        </div>
-        <div class="halamanPersegi" id="halPersegi">
-            <div class="inputSection">
-                <label for="squareSide" id="labelSquareSide">Hitung Luas dan Keliling Persegi</label>
-                <input type="number" id="kolomIsian" placeholder="Panjang Sisi">
-                <div class="button">
-                    <button class="btnHitung" onclick="mulaiHitung()">Hitung</button>
-                    <button class="btnReset">Reset</button>
-
-
-                    <script>
-                        function mulaiHitung() {
-                            let panjang = document.getElementById("nilaiPanjang").value;
-                            let lebar = document.getElementById("nilaiLebar").value;
-
-                            let luasPersPan = panjang * lebar;
-                            let keliPersPan = (panjang * 2) + (lebar * 2);
-                            console.log(` ${luasPersPan} dan ${keliPersPan}`);
-                            document.writeln(`Persegi Ini memiliki Luas ${luasPersPan} satuan dan panjang keliling ${keliPersPan} satuan`);
-                        }
-                    </script>
-
-                </div>
             </div>
 
-
-        </div>
-        <div class="halamanPersegiPanjang" id="halPersPan">
-            <div class="inputSection">
-                <label for="squareSide" id="labelSquareSide">Hitung Luas dan Keliling Persegi Panjang</label>
-                <input type="number" id="kolomIsian" placeholder="Panjang Sisi">
-                <input type="number" id="kolomIsian" placeholder="Lebar Sisi">
-                <div class="button">
-                    <button class="btnHitung" onclick="mulaiHitung()">Hitung</button>
-                    <button class="btnReset">Reset</button>
-
-
-                    <script>
-                        function mulaiHitung() {
-                            let panjang = document.getElementById("nilaiPanjang").value;
-                            let lebar = document.getElementById("nilaiLebar").value;
-
-                            let luasPersPan = panjang * lebar;
-                            let keliPersPan = (panjang * 2) + (lebar * 2);
-                            console.log(` ${luasPersPan} dan ${keliPersPan}`);
-                            document.writeln(`Persegi Ini memiliki Luas ${luasPersPan} satuan dan panjang keliling ${keliPersPan} satuan`);
-                        }
-                    </script>
-
-                </div>
+            <div class="pilihObjek">
+                <p>Pilih Objek Hitung</p>
+                <a href="#halPersegi">
+                    <button class="objekHitung">Persegi</button>
+                </a>
+                <a href="#halPersPan">
+                    <button class="objekHitung">Persegi Panjang</button>
+                </a>
             </div>
+            <div class="halamanPersegi">
+                <div class="inputSection">
+                    <label for="squareSide" id="labelSquareSide">Hitung Luas dan Keliling Persegi</label>
+                    <input type="number" id="sisiPersegi" placeholder="Panjang Sisi" onInput="validasiInput(this)">
+                    <div class="button">
+                        <button value="Hitung" class="btn" onclick="Hitung()">Hitung</button>
+                        <button value="Reset" class="btn" onclick="Reset()">Reset</button>
+                    </div>
+                </div>
+                <div class="resultSection">
+                    <p id="hasilLuasPersegi"></p>
+                    <p id="hasilKelilingPersegi"></p>
+                </div>
 
 
+            </div>
+            <div class="halamanPersegiPanjang" id="halPersPan">
+                <div class="inputSection">
+                    <label for="squareSide" id="labelSquareSide">Hitung Luas dan Keliling Persegi Panjang</label>
+                    <input type="number" id="panjangSisi" placeholder="Panjang Sisi" onInput="validasiInput(this)">
+                    <input type="number" id="lebarSisi" placeholder="Lebar Sisi" onInput="validasiInput(this)">
+
+                    <div class="button">
+                        <button value="Hitung" class="btn" onclick="">Hitung</button>
+                        <button value="Reset" class="btn" onclick="">Reset</button>
+                    </div>
+                </div>
+                <div class="resultSection">
+                    <p id="hasilLuasPersegi"></p>
+                    <p id="hasilKelilingPersegi"></p>
+                </div>
+
+            </div>
         </div>
+
 
     </div>
+
+
+    </div>
+
+    </div>
+    <script src="./js/script.js"></script>
 
 </body>
 
